@@ -80,7 +80,7 @@ const App = () => {
       showNotification(`Added ${returnedPerson.name}`, 'success')
     })
     .catch(error => {
-      showNotification(error.response.data.error, 'error')
+      showNotification(`Person validation failed: name ${setNewName} is shorter than the minimum allowed length (3)`, 'error')
     })
   }
 
