@@ -80,15 +80,9 @@ const App = () => {
       showNotification(`Added ${returnedPerson.name}`, 'success')
     })
     .catch(error => {
-<<<<<<< HEAD
     const message = error.response.data.error
     showNotification(message, 'error')
    })
-=======
-      showNotification(`Person validation failed: name ${setNewName} is shorter than the minimum allowed length (3)`, 'error')
-    })
->>>>>>> d3f6fcefa4d473b0a469b45a18306c438590187b
-  }
 
   const deletePerson = (id, name) => {
     if(window.confirm(`Delete ${name}?`)){
@@ -131,6 +125,7 @@ const App = () => {
       <Persons persons={personsToShow} onDelete={deletePerson} />
     </div>
   )
+ }
 }
 
 export default App
