@@ -80,8 +80,9 @@ const App = () => {
       showNotification(`Added ${returnedPerson.name}`, 'success')
     })
     .catch(error => {
-      showNotification(error.response.data.error, 'error')
-    })
+    const message = error.response.data.error
+    showNotification(message, 'error')
+   })
   }
 
   const deletePerson = (id, name) => {
