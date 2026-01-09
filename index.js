@@ -1,3 +1,4 @@
+console.log('RUNNING INDEX.JS -VERSION A')
 require('dotenv').config()
 const express = require('express')
 const Person = require('./models/person')
@@ -47,7 +48,7 @@ app.get('/info', (request, response, next) => {
    .catch(error => next(error))
 })
 
-app.post('/api/persons', (request, response)=> {
+app.post('/api/persons', (request, response, next)=> {
     const body = request.body
 
     if (!body.name) {
